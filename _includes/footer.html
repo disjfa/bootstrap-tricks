@@ -1,5 +1,9 @@
 <footer class="text-xs-right">
-
+    <a href="{{ "/" | prepend: site.baseurl }}">
+        <i class="fa fa-home"></i>
+        {{ site.title }}
+    </a>
+    |
     subscribe
     <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
         <i class="fa fa-rss"></i>
@@ -11,5 +15,4 @@
         <i class="fa fa-github"></i>
         on github
     </a>
-
 </footer>
