@@ -1,0 +1,87 @@
+---
+layout: default
+title: Card collapse tricks!
+description: Add an open and close chevron on a card.
+css: style.css
+---
+
+<div class="container">
+    <h1>Card collapse tricks!</h1>
+    <p class="lead">
+        The target is to add and <strong>animate an open and collapse icon</strong> using <strong>css</strong>.
+    </p>
+    <p>
+        For the icon we use a <a href="http://fontawesome.io/icon/chevron-down/">chevron down</a> icon from <a href="http://fontawesome.io">fontawesome</a>.
+        The collapse is <a href="http://v4-alpha.getbootstrap.com/components/collapse/">the bootstrap collapse</a> component from <a href="http://v4-alpha.getbootstrap.com/">bootstrap</a>.
+    </p>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>The example</h3>
+            <p>
+                Here we can see the end result.
+            </p>
+        </div>
+        <div class="col-lg-8">
+            {% include_relative card.html %}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>The html</h3>
+            <p>
+                First, we copy pasted the bootstrap example for a collapsible card. For this example i just copied the first item.
+            </p>
+            <p>
+                Then we just added a font awesome chevron icon, pulling it to the right site.
+            </p>
+        </div>
+        <div class="col-lg-8">
+            {% highlight html %}{% include_relative card.html %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>The css</h3>
+            <p>
+                We've added a transition property on the <strong>.fa</strong> class. Adding a <strong>ease-in-out</strong> just for show.
+            </p>
+            <p>
+                And the bootstrap collapse javascript adds a <strong>.collapsed</strong> class when a collapsible item is collapsed, on the trigger.
+            </p>
+        </div>
+        <div class="col-lg-8">
+            {% highlight css %}{% include_relative style.css %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>Start collapsed</h3>
+            <p>
+                When you want to start a card collapsed, do not forget to <strong>add</strong> the <strong>.collapsed</strong> class on the <strong>trigger</strong>. And do <strong>remove</strong> the <strong>.in</strong> class on the <strong>collapsible container</strong>.
+            </p>
+        </div>
+        <div class="col-lg-8">
+            {% include_relative card-collapsed.html %}
+            {% highlight html %}{% include_relative card-collapsed.html %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>I see what you did there!</h3>
+            <p>You did not add the whole shebang, accordion and all.</p>
+            <p>Sure no, the card bits are the cool parts. The accordion part is another story, then we would need to explain the parent class and things.</p>
+            <p>But for now, we just copy pasted the example and added the <a href="http://fontawesome.io/">fontawesome</a> icon on the headers. The example uses the explanation like we said, <strong>so it just gets it right</strong>.</p>
+        </div>
+        <div class="col-lg-8">
+            {% include_relative accordion.html %}
+            {% highlight html %}{% include_relative accordion.html %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    {% include footer.html %}
+</div>
