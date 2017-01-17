@@ -61,11 +61,12 @@ css: style.css
         <div class="col-lg-4">
             <h3>Start collapsed</h3>
             <p>
-                When you want to start a card collapsed, do not forget to <strong>add</strong> the <strong>.collapsed</strong> class on the <strong>trigger</strong>. And do <strong>remove</strong> the <strong>.in</strong> class on the <strong>collapsible container</strong>.
+                When you want to start a card collapsed, do not forget to <strong>add</strong> the <strong>.collapsed</strong> class on the <strong>trigger</strong>. And do <strong>remove</strong> the <strong>.show</strong> class on the <strong>collapsible container</strong>.
             </p>
         </div>
         <div class="col-lg-8">
             {% include_relative card-collapsed.html %}
+            <br>
             {% highlight html %}{% include_relative card-collapsed.html %}{% endhighlight %}
         </div>
     </div>
@@ -79,6 +80,7 @@ css: style.css
         </div>
         <div class="col-lg-8">
             {% include_relative accordion.html %}
+            <br>
             {% highlight html %}{% include_relative accordion.html %}{% endhighlight %}
         </div>
     </div>

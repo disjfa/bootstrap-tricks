@@ -5,18 +5,20 @@
 layout: default
 ---
 
-<div class="bg-primary text-white">
-    <div class="container ">
-        <h1>{{ site.title }}</h1>
+<nav class="navbar navbar-inverse bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            {{ site.title }}
+        </a>
     </div>
-</div>
+</nav>
 <div class="container bg-faded py-2">
     <p class="lead">Awesome bootstrap tricks</p>
 
     <div class="row">
         {% for page in site.pages %}
             {% if page.title %}
-                <div class="col-sm-6">
+                <div class="col-sm-6 py-2">
                     <a href="{{ page.url }}" class="card card-inverse card-info">
                         <div class="card-block text-white">
                             <h3>{{ page.title }}</h3>
