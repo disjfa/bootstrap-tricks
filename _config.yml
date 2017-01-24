@@ -17,9 +17,12 @@ title: Bootstrap tricks
 email: disjfa@disjfa.nl
 description: > # this means to ignore newlines until "baseurl:"
   Create awesome bootstrap tricks.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://bootstrap-tricks.dimme.nl" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/bootstrap-tricks" # the subpath of your site, e.g. /blog
+url: "https://disjfa.github.io/bootstrap-tricks" # the base hostname & protocol for your site, e.g. http://example.com
 github_url:  https://disjfa.github.io/
+
+# Google
+google_analytics: UA-83598448-1
 
 # Build settings
 markdown: kramdown

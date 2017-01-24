@@ -19,7 +19,7 @@ layout: default
         {% for page in site.pages %}
             {% if page.title %}
                 <div class="col-sm-6 py-2">
-                    <a href="{{ page.url }}" class="card card-inverse card-info">
+                    <a href="{{ page.url | prepend: site.baseurl }}" class="card card-inverse card-info">
                         <div class="card-block text-white">
                             <h3>{{ page.title }}</h3>
                             <footer>
@@ -33,7 +33,7 @@ layout: default
     </div>
     <hr>
     {% for post in site.posts %}
-        <a href="{{ post.url }}">
+        <a href="{{ post.url | prepend: site.baseurl }}">
             <div>
                 {{ post.title }}
                 <div class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</div>
