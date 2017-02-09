@@ -1,0 +1,116 @@
+---
+layout: default
+title: Just use vue.js!
+description: Add basic usage of vue on your template
+---
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Just use vue.js!</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#vue-app">Vue example <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <p class="lead">
+            The target is to add vue.js on an existing website and just add a panel on it, lets kill a puppy and add a todo app.
+        </p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#vue-app" role="button">Learn more &raquo;</a>
+        </p>
+    </div>
+</div>
+
+<div class="container" id="vue-app">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Add vue</h2>
+            <p>
+                First we need the javascipt, just add this <strong>script</strong> tag on the bottom of the page
+            </p>
+            {% highlight html %}{% include_relative init.html %}{% endhighlight %}
+            <p>
+                So, vue is added. Next, we need to set a place for vue to <strong>load</strong>.
+            </p>
+            <h2 id="initialize">Initialize vue</h2>
+            <p>
+                Add a section using an <strong>id</strong> on the page
+            </p>
+            {% highlight html %}{% include_relative container.html %}{% endhighlight %}
+            <p>
+                And ad a piece of javascipt to <strong>initialize</strong> vue
+            </p>
+            {% highlight javascript %}{% include_relative vue.js %}{% endhighlight %}
+            <p>
+                This will initalize vue on the page. All items <strong>within this section</strong> will be monitored bu vue.js, so we can place elements on it.
+            </p>
+            <h2 id="component">Create a simple todo component</h2>
+            <p>
+                Add a simple todo <strong>component</strong>, just before you initialize vue in the previous step.
+            </p>
+            {% highlight javascript %}{% include_relative todo-component.js %}{% endhighlight %}
+            <h2 id="template">Template</h2>
+            <p>
+                If you noticed, i used a <code>template: '#todo-component',</code> in my component. This is because the inline templates of vue are cumbersome and i like my templates clean and expandable. So i added them in a script tag <strong>outside</strong> my #vue-app section. Note the <code>id="todo-component"</code> referenced from my component.
+            </p>
+            {% highlight html %}{% include_relative template.html %}{% endhighlight %}
+            <h2>Putting it all together.</h2>
+            <ul>
+                <li>Add a main section using an id</li>
+                <li>Add a template after this</li>
+                <li>Import cdn</li>
+                <li>Add a component js</li>
+                <li>Initialize vue</li>
+            </ul>
+            <p>
+                And <strong>done</strong>. Check it out on the right side, or below this on mobile. Cheers.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <todo-component></todo-component>
+            <h2>Initialize vue</h2>
+            <p>
+                Add a section using an id on the page
+            </p>
+            <a href="#initialize">Read more &raquo;</a>
+            <hr>
+            <h2>Create a component</h2>
+            <p>
+                Add a simple todo component, just before you initialize vue in the previous step.
+            </p>
+            <a href="#component">Read more &raquo;</a>
+            <hr>
+            <h2>Add a template</h2>
+            <p>
+                Add a template on the page to use on your component
+            </p>
+            <a href="#template">Read more &raquo;</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <hr>
+    {% include footer.html %}
+</div> <!-- /container -->
+
+{% include_relative template.html %}
+
+{% include_relative init.html %}
+<script>
+    {% include_relative todo-component.js %}
+    {% include_relative vue.js %}
+</script>
+
