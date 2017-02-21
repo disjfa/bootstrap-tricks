@@ -1,0 +1,130 @@
+---
+layout: default
+title: Animate a carousel!
+description: Lets animate actions on a carusel item
+css: style.css
+---
+
+<div class="container py-2">
+    <h1>Animate a carousel!</h1>
+    <p class="lead">
+        The target is to add and <strong>animate a carousel</strong> using <strong>css</strong>.
+    </p>
+    <p>
+        Ok, so some base rules. We know bootstrap has a <a href="http://v4-alpha.getbootstrap.com/components/carousel/">carousel</a>.
+        The carousel adds an <strong>.active</strong> class on an item when scolled to.
+        The timeout of a default carousel is <strong>5000 ms</strong>.
+        For the images we use <a href="https://unsplash.com/">unsplash</a> because they are awesome.
+        Lets go.
+    </p>
+    <hr>
+    <div class="row pb-3">
+        <div class="col-lg-4">
+            <h3>The example</h3>
+            <p>So lets see what we are making.</p>
+            <p>The carousel slides, on every slide the title <strong>animates down</strong>. After that the <strong>buttons animate</strong> in.</p>
+        </div>
+        <div class="col-lg-8">
+            <div id="carouselExampleIndicators" class="carousel slide bg-primary" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1427477321886-abc24e8ce923?dpr=1&auto=compress,format&fit=crop&w=800&h=450&q=80);">
+                                <h3>Blanditiis consequatur</h3>
+                                <div class="row py-3">
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-primary btn-block">
+                                            <i class="fa fa-puzzle-piece"></i>
+                                            Button 1
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-info btn-block">
+                                            <i class="fa fa-paper-plane"></i>
+                                            Button 2
+                                        </a>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1435783099294-283725c37230?dpr=1&auto=compress,format&fit=crop&w=800&h=450&q=80);">
+                                <h3>Ab accusantium adipisci</h3>
+                                <div class="row py-3">
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-primary btn-block">
+                                            <i class="fa fa-puzzle-piece"></i>
+                                            Button 1
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-info btn-block">
+                                            <i class="fa fa-paper-plane"></i>
+                                            Button 2
+                                        </a>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1455717974081-0436a066bb96?dpr=1&auto=compress,format&fit=crop&w=800&h=450&q=80);">
+                                <h3>Ad expedita impedit</h3>
+                                <div class="row py-3">
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-primary btn-block">
+                                            <i class="fa fa-puzzle-piece"></i>
+                                            Button 1
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-info btn-block">
+                                            <i class="fa fa-paper-plane"></i>
+                                            Button 2
+                                        </a>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-lg-4">
+            <h3>A slide</h3>
+            <p>For a slide i use an <a href="http://v4-alpha.getbootstrap.com/utilities/responsive-helpers/#responsive-embeds">responsive embed</a> so i can force it to an 16&times;9 frame</p>
+            <p>Then we just add a title and some buttons.</p>
+        </div>
+        <div class="col-lg-8">
+            {% include_relative embed-responsive.html %}
+            <br>
+            {% highlight html %}{% include_relative embed-responsive.html %}{% endhighlight %}
+        </div>
+    </div>
+
+    {% include footer.html %}
+</div>
