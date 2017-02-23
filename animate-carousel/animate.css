@@ -1,0 +1,14 @@
+.carousel-item.active h3 {
+  animation: animate-carousel-title 1s normal forwards;
+}
+
+@keyframes animate-carousel-title {
+  0% {
+    transform: translate(0, -2em);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

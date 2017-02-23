@@ -18,7 +18,7 @@ css: style.css
         Lets go.
     </p>
     <hr>
-    <div class="row pb-3">
+    <div class="row pb-3" id="example">
         <div class="col-lg-4">
             <h3>The example</h3>
             <p>So lets see what we are making.</p>
@@ -116,7 +116,7 @@ css: style.css
     <div class="row pb-3">
         <div class="col-lg-4">
             <h3>A slide</h3>
-            <p>For a slide i use an <a href="http://v4-alpha.getbootstrap.com/utilities/responsive-helpers/#responsive-embeds">responsive embed</a> so i can force it to an 16&times;9 frame</p>
+            <p>For a slide i use an <a href="http://v4-alpha.getbootstrap.com/utilities/responsive-helpers/#responsive-embeds">responsive embed</a> so i can force it to an 16&times;9 frame.</p>
             <p>Then we just add a title and some buttons.</p>
         </div>
         <div class="col-lg-8">
@@ -125,6 +125,35 @@ css: style.css
             {% highlight html %}{% include_relative embed-responsive.html %}{% endhighlight %}
         </div>
     </div>
-
+    <div class="row pb-3">
+        <div class="col-lg-4">
+            <h3>Some animations</h3>
+            <p>So next we will need some animations. We will animate them on the <code>.carousel-item.active</code> class so we can use the active carousel item as a base.</p>
+            <p>So in this example i fade in and slide down the title on the <code>h3</code> elemen.</p>
+        </div>
+        <div class="col-lg-8">
+            {% highlight css %}{% include_relative animate.css %}{% endhighlight %}
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-lg-4">
+            <h3>And the buttons</h3>
+            <p>Next we animate the buttons.</p>
+            <p>Note, we also add an <code>animation-delay</code> on the items, so they start after each other.</p>
+        </div>
+        <div class="col-lg-8">
+            {% highlight css %}{% include_relative animate-buttons.css %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    <div class="row pb-3">
+        <div class="col-lg-8 push-lg-2">
+            <h3>And done.</h3>
+            <p>So what we end up with is a carousel and on every slide the animation starts over.</p>
+            <p>You can check out the <a href="#example">example</a> on the page for the final result.</p>
+            <p>You can of course create the most elaborate animation you can think of. Just go wild.</p>
+        </div>
+    </div>
+    <hr>
     {% include footer.html %}
 </div>
