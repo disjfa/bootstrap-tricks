@@ -6,14 +6,14 @@ css: style.css
 ---
 
 <div class="admin">
-    <div class="admin-sidebar bg-faded">
-        <div class="navbar navbar-light navbar-toggleable-md">
+    <div class="admin-sidebar bg-light">
+        <div class="navbar navbar-light bg-light navbar-expand-lg d-lg-block">
+            <a class="navbar-brand" href="#">Sidebar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-navigation" aria-controls="sidebar-navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse py-2" role="navigation" id="sidebar-navigation">
                 <div>
-                    <h5>Sidebar</h5>
                     <p>Here you can just create a simple admin menu.</p>
                     <hr>
                     <ul class="navbar-nav d-block">
@@ -46,10 +46,14 @@ css: style.css
                     <hr>
                     <h5>And just some text to fill</h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda at consequatur corporis distinctio ducimus, explicabo iure laboriosam maiores minus modi non numquam odit placeat praesentium quod recusandae sit totam!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda at consequatur
+                        corporis distinctio ducimus, explicabo iure laboriosam maiores minus modi non numquam odit
+                        placeat praesentium quod recusandae sit totam!
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda at consequatur corporis distinctio ducimus, explicabo iure laboriosam maiores minus modi non numquam odit placeat praesentium quod recusandae sit totam!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda at consequatur
+                        corporis distinctio ducimus, explicabo iure laboriosam maiores minus modi non numquam odit
+                        placeat praesentium quod recusandae sit totam!
                     </p>
                 </div>
             </div>
@@ -59,14 +63,16 @@ css: style.css
         <div class="container py-2 px-2">
             <h1 id="easy">Easy admin boilerplate!</h1>
             <p>
-                The target of this template is to create <strong>two columns</strong> on a page. One is the sidebar and one is the body.
+                The target of this template is to create <strong>two columns</strong> on a page. One is the sidebar and
+                one is the body.
                 The css will extend from <a href="http://getbootstrap.com/">bootstrap (v4)</a>.
             </p>
             <p>
                 The sidebar and body have to <strong>scroll independently</strong>.
             </p>
             <p>
-                On <strong>mobile phones</strong> and <strong>tablets</strong> in portrait mode (992px or smaller in width) the menu needs to revert to a <strong>hamburger menu</strong>.
+                On <strong>mobile phones</strong> and <strong>tablets</strong> in portrait mode (992px or smaller in
+                width) the menu needs to revert to a <strong>hamburger menu</strong>.
             </p>
             <h2 id="code">Css and html!</h2>
             {% highlight css %}{% include_relative style.css %}{% endhighlight %}
@@ -81,7 +87,9 @@ css: style.css
                 Wait what! You told me about mobile phones and stuff, and you just added some styles for large screens.
             </blockquote>
             <p>
-                Yeah, bootstrap has an awesome setup for mobile togglable content. So i just added a <a href="http://v4-alpha.getbootstrap.com/components/navbar/#collapsible-content">collapsible navbar</a> from the documentation.
+                Yeah, bootstrap has an awesome setup for mobile togglable content. So i just added a
+                <a href="http://v4-alpha.getbootstrap.com/components/navbar/#collapsible-content">collapsible navbar</a>
+                from the documentation.
                 I did remove the <strong>nav-item</strong> class for the list items in it so they don't float.
             </p>
             <h2 id="supports">Supports!</h2>
