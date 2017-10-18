@@ -1,0 +1,41 @@
+---
+layout: default
+title: Easy landing page!
+description: Lets build an awesome landing page
+css: style.css
+---
+
+{% include_relative landing-page.html %}
+<div class="bg-light">
+    <div class="container py-3" id="more">
+        <h3>How to create this</h3>
+        <p>
+            Lets first start by showing what i added to create this page above. We just added some <strong>css</strong>
+            on the <a href="https://getbootstrap.com/">bootstrap</a> base.
+        </p>
+        {% highlight css %}{% include_relative style.css %}{% endhighlight %}
+        <h3>Explain!</h3>
+        <p>
+            On the <strong>.col-*</strong> in the main <strong>.container-fluid</strong> we added a
+            <strong>.vmin-40</strong> and <strong>.vmin-lg-1oo</strong>100% view height on large devices and a 40% view
+            height on small devices.
+        </p>
+        <p>
+            Poof, height and space. Next a added a background image, added a custom <strong>.img-cover</strong> to
+            position the image <strong>centered</strong> and sized as <strong>cover</strong>.
+        </p>
+        <h3>Text!</h3>
+        <p>
+            Added a text on the left we use bootstrap's own <a href="https://getbootstrap.com/docs/4.0/utilities/flex/">flex
+                utilities</a> to position the text centered.
+        </p>
+        <h3>I see what you did there!</h3>
+        <p>
+            Adding it all together, we end up with html looking something like this.
+        </p>
+        {% highlight html %}{% include_relative landing-page.html %}{% endhighlight %}
+    </div>
+</div>
+<div class="container py-3">
+    {% include footer.html %}
+</div>

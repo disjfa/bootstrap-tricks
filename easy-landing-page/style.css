@@ -1,0 +1,14 @@
+@media screen and (min-width: 992px) {
+    .vmin-1oo {
+        min-height: 100vh;
+    }
+}
+
+.vmin-40 {
+    min-height: 40vh;
+}
+
+.img-cover {
+    background-position: center center;
+    background-size: cover;
+}
