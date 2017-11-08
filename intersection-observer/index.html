@@ -1,0 +1,92 @@
+---
+layout: default
+title: Animate with IntersectionObserver!
+description: Lets animate items on the page
+css: style.css
+javascript: instersect.js
+---
+
+<div class="container py-3">
+    <h1>Animate with Intersection&shy;Observer!</h1>
+    <p class="lead">
+        So the job was to animate an element when they get on the page. The people on the internet had the same
+        issue so they made the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection
+            Observer API</a>. Thanks!
+    </p>
+    <p>
+        Lets check it out. Just scroll through this page and check out the fading effect on the
+        <a href="#cards">cards</a>. And then scroll down to the <a href="#explanation">explanation</a>.
+    </p>
+</div>
+<div class="bg-light">
+    <div class="container py-3" id="cards">
+        <h3>The cards</h3>
+        <div class="row">
+            {% for i in (1..24) %}
+                <div class="col-12 col-lg-4 col-md-6 my-3">
+                    <div class="card js-observe">
+                        <img class="card-img-top" src="http://via.placeholder.com/350x250" alt="Card image cap">
+
+                        <div class="card-body">
+                            <h4 class="card-title">Card title no {{ i }}</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae cupiditate eaque et
+                                harum impedit ipsam laboriosam maxime nesciunt obcaecati, sint velit! Dignissimos
+                                officiis reiciendis repellat temporibus unde voluptatem voluptatum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container py-3" id="explanation">
+    <h3>Explanation</h3>
+    <p>
+        It's quite simple, the intersection observer has some calls to check if an item intersects with the element you
+        want. On this example i will observe on the window. So no argument is needed. Lets just code.
+    </p>
+</div>
+<div class="bg-light">
+    <div class="container py-3">
+        <h3>The javascript.</h3>
+        {% highlight js %}{% include_relative instersect.js %}{% endhighlight %}
+    </div>
+</div>
+<div class="container py-3">
+    <ol>
+        <li>Check if the browser supports IntersectionObserver</li>
+        <li>Have a callback for the observer</li>
+        <li>Initialize observer on element</li>
+    </ol>
+    <p>
+        Here we use the <strong>isIntersecting</strong> if the element is intersecting, with the window. If it is we
+        add a class <strong>in-view</strong> to the intersecting elements. For the observer we use a class <strong>js-observe</strong>.
+        And to that nodelist we add let the IntersectionObserver observe. When an elements gets on screen the element
+        now gets a <strong>in-view</strong> class, wich we will animate. And that's it. So simple. Now for some
+        animation, css to the rescue.
+    </p>
+    <p>
+        Just note that the intersection observer is not supported jet in all browsers, check that on
+        <a href="https://caniuse.com/#feat=intersectionobserver">caniuse</a>. But there is an
+        <a href="https://www.npmjs.com/package/intersection-observer">IntersectionObserver polyfill</a> which
+        supports major browsers.
+    </p>
+</div>
+
+<div class="bg-light">
+    <div class="container py-3">
+        <h3>The css</h3>
+        {% highlight css %}{% include_relative style.css %}{% endhighlight %}
+    </div>
+</div>
+<div class="container py-3">
+    <p>
+        I did add a small delay on the <strong>animation</strong> when the elements get on the screen. But other than
+        that just add it and enjoy the animations.
+    </p>
+</div>
+<div class="container py-3">
+    {% include footer.html %}
+</div>
