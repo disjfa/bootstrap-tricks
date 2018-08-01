@@ -32,5 +32,11 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - assets
+  - postcss.config.js
 
 host: 0.0.0.0

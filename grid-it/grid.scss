@@ -1,0 +1,43 @@
+.grid {
+  padding-left: $spacer;
+  padding-right: $spacer;
+  padding-bottom: 100px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+  .grid {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 300px 10px 1fr;
+    grid-template-rows: min-content 10px 1fr 10px min-content;
+    height: 100vh;
+    max-width: 100%;
+
+    &-sidebar,
+    &-header,
+    &-content {
+      overflow: auto;
+    }
+    &-sidebar {
+      grid-column: 1;
+      grid-row: 1/6;
+    }
+    &-header {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    &-content {
+      grid-column: 3;
+      grid-row: 3;
+    }
+    &-footer {
+      grid-column: 3;
+      grid-row: 5;
+    }
+  }
+}

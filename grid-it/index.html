@@ -1,0 +1,135 @@
+---
+layout: default
+title: Grid it!
+description: Lets build a css grid webpage
+---
+
+<div class="grid">
+    <div class="grid-sidebar bg-dark">
+        <nav class="navbar fixed-bottom navbar-dark navbar-expand-md d-block bg-dark">
+            <div class="collapse navbar-collapse py-2" id="sidebar-navigation">
+                <ul class="navbar-nav d-block">
+                    <li class="nav-item">
+                        <a href="#grid-it" class="nav-link">
+                            Grid it
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#code" class="nav-link">
+                            Css and html
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#done" class="nav-link">
+                            Done
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#isee" class="nav-link">
+                            I see what you did there
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#supports" class="nav-link">
+                            Supports
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#sidebar-navigation" aria-controls="sidebar-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <div class="grid-header bg-primary">
+        <div class="container-fluid py-2">
+            <h1 class="text-light my-0">{{ page.title }}</h1>
+        </div>
+    </div>
+    <div class="grid-content bg-light">
+        <div class="container-fluid py-2">
+            <div id="grid-it">
+                <h1>Let's use css grid</h1>
+                <p>
+                    Css grid, it is a new thing but is it. Let's set up such a system. You can check out awesome
+                    examples on <a href="https://gridbyexample.com/">grid by example</a> and build something awesome.
+                    But i also want to keep in mind some older users for this example. Older users who still use
+                    Internet explorer. They are there so why not.
+                </p>
+            </div>
+            <div id="code">
+                <h3>Code</h3>
+                <p>
+                    Let us set up some css code. I did not use <a href="https://caniuse.com/#feat=css-featurequeries">@supports</a>
+                    queries because IE10 can use grid css but dos not know it it supports this.
+                </p>
+                <p>
+                    The next thing is we want to set up some code we build with the
+                    <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> so we can build code and render
+                    to IE10 and up. So we have to set up the <code>{grid: true}</code> on the autoprefixer. Also when we
+                    do this we can only prefix code IE10 gets. I tried to use
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a>.
+                    But when i added some media queries IE did not listed. So i ended up with
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a>
+                    and
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a>.
+                    They do the same, but we have to be able to count to 10 sadly.
+                </p>
+                <p>
+                    Let's go
+                </p>
+                {% highlight scss %}{% include_relative grid.scss %}{% endhighlight %}
+                <h3>Html</h3>
+                <p>
+                    Also set up some html. I also added some <a href="https://getbootstrap.com/">bootstap</a> because we
+                    like bootstrap! I added the navbar fixed to the bottom and added a helper class on the larger
+                    displays.
+                </p>
+                {% highlight html %}{% include_relative grid.html %}{% endhighlight %}
+            </div>
+            <div id="done">
+                <h3>And done!</h3>
+                <p>
+                    And we are done, we built a simple grid based layout i would say anyone can see. Unless they are on
+                    very old browsers or browsers that just don't support grid. But for them we even have a mobile
+                    layout they can see on they (large) screen. So no harm done! Anyone can see our content.
+                </p>
+            </div>
+            <div id="isee">
+                <h3>I see what you did there</h3>
+                <p>
+                    Now we built a grid system you probably see on this page. It is awesome and you can use this. Get
+                    started with it and play around, just keep you users in mind on where to stop or where to play on!
+                </p>
+            </div>
+            <div id="supports">
+                <h3>Supports</h3>
+                <p>
+                    The example here is to built systems and keep in mind there are older browsers on this world. Add
+                    the
+                    <a href="https://github.com/postcss/autoprefixer#faq">autoprefixer</a>, add the <code>{grid:
+                        true}</code> and test where your code breaks, or keeps working. Newer browsers can do anything.
+                </p>
+                <p>
+                    Also i found a nice article on what to do and check for grid layouts if
+                    <a href="https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/">you
+                        should try and use the ie implementation of css grid layout</a>.
+                </p>
+                <p>
+                    Also just check out the series on
+                    <a href="https://css-tricks.com/css-grid-in-ie-debunking-common-ie-grid-misconceptions/">css-tricks.com</a>.
+                    It can help you on your next project.
+                </p>
+                <p>
+                    Now it is your turn to build something awesome!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="grid-footer bg-light">
+        <div class="container-fluid py-2">
+            {% include footer.html %}
+        </div>
+    </div>
+</div>
+
