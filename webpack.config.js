@@ -9,12 +9,18 @@ Encore
   .autoProvidejQuery()
   .enableSourceMaps(!Encore.isProduction())
   .enablePostCssLoader()
-  // .addPlugin(new GenerateSW({
-  //   globDirectory: './_site',
-  //   globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf}'],
-  //   swDest: './../service-worker.js',
-  // }))
-  .cleanupOutputBeforeBuild()
+  .enableSingleRuntimeChunk()
+// .addPlugin(new GenerateSW({
+//   globDirectory: './_site',
+//   globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf}'],
+//   swDest: './../service-worker.js',
+// }))
 ;
+
+if (Encore.isProduction()) {
+  Encore
+    .cleanupOutputBeforeBuild()
+  ;
+}
 
 module.exports = Encore.getWebpackConfig();

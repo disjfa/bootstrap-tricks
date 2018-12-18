@@ -1,0 +1,13 @@
+{
+  "entrypoints": {
+    "main": {
+      "js": [
+        "/bootstrap-tricks/build/runtime.js",
+        "/bootstrap-tricks/build/main.js"
+      ],
+      "css": [
+        "/bootstrap-tricks/build/main.css"
+      ]
+    }
+  }
+}

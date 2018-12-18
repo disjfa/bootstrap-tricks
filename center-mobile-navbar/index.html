@@ -1,0 +1,67 @@
+---
+layout: default
+title: Center mobile navbar
+description: Let's play and center a mobile navbar
+---
+
+{% include_relative navbar.html %}
+
+<div class="container" id="example">
+    <h3>The example</h3>
+    <p>
+        Let's talk about what to do. On a mobile device i want the menu to center the text, default
+        <a href="https://getbootstrap.com/">bootstrap</a> aligns the menu items to the left.
+    </p>
+    <p>
+        This is not what we want. But we know bootstrap, it uses flexbox because it is awesome! So let's start with the
+        default <a href="https://getbootstrap.com/docs/4.1/components/navbar/">navbar</a> from bootstrap and play a bit
+        with it. This is what we ended up with;
+    </p>
+</div>
+
+<div class="container" id="html">
+    <h3>The html</h3>
+    {% highlight html %}{% include_relative navbar.html %}{% endhighlight %}
+</div>
+
+<div class="container" id="see-what">
+    <h3>I see what you did there</h3>
+    <p>
+        And if you did not, let's explain! From the example i added a container, still default. Next on the <code>navbar-nav</code>
+        i just added a class <code>align-items-center</code>. And done! Nav items centered on a mobile screen.
+        {% highlight html %}<ul class="navbar-nav mr-auto">{% endhighlight %}
+        {% highlight html %}<ul class="navbar-nav align-items-center mr-auto">{% endhighlight %}
+    </p>
+    <p>
+        Ok, on the example there was a form on the left. We replaced that with a couple of buttons. But the inner
+        workings is the same, only that the form is a bit more checking out. But we added a class <code>d-flex flex-row
+            justify-content-center</code> on the container. This will still float the container to the right on a
+        desktop, but flexes the container on a mobile screen. This can be added on the form on the basic example.
+    </p>
+    <p>
+        Also, on the dropdown elements we added a <code>text-center</code> class. On the <code>nav-link</code> and the
+        <code>dropdown-item</code> items. This is so that text is also centered
+    </p>
+    <p>
+        And that's it! We are done, we have a nice centered navbar.
+    </p>
+</div>
+
+<div class="container py-2">
+    <h3>Once more, just the example</h3>
+    <p>
+        Just to be sure. Let's do that again. Now with a copy paste from the bootstrap page and the classes we
+        mentioned!
+    </p>
+</div>
+{% include_relative navbar-basic.html %}
+<div class="container py-2">
+    {% highlight html %}{% include_relative navbar.html %}{% endhighlight %}
+</div>
+<div class="container py-2">
+    <p class="lead">Enjoy!</p>
+</div>
+
+<div class="container py-2">
+    {% include footer.html %}
+</div>

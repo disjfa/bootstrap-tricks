@@ -33,5 +33,6 @@
 {% if page.javascript %}
     <script src="{{ page.javascript }}"></script>
 {% endif %}
+<script src="{{ "/build/runtime.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/build/main.js" | prepend: site.baseurl }}"></script>
 </html>
