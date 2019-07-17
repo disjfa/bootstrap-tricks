@@ -1,0 +1,23 @@
+.carousel-animation .carousel-item {
+    transform: none;
+}
+
+.carousel-animation .carousel-item-left {
+    animation-name: animationInRightName;
+    animation-duration: .65s;
+}
+
+.carousel-animation .carousel-item-left.active {
+    transform: translate(0, 0);
+    animation-name: animationOutLeftName;
+}
+
+.carousel-animation .carousel-item-right {
+    animation-name: animationInLeftName;
+    animation-duration: .65s;
+}
+
+.carousel-animation .carousel-item-right.active {
+    transform: translate(0, 0);
+    animation-name: animationOutRightName;
+}

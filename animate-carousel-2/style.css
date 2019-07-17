@@ -1,0 +1,47 @@
+.carousel-zoom .carousel-item {
+    transform: none;
+}
+
+.carousel-zoom .carousel-item-left {
+    animation-name: zoomInRight;
+    animation-duration: .65s;
+}
+
+.carousel-zoom .carousel-item-left.active {
+    transform: translate(0, 0);
+    animation-name: zoomOutLeft;
+}
+
+.carousel-zoom .carousel-item-right {
+    animation-name: zoomInLeft;
+    animation-duration: .65s;
+}
+
+.carousel-zoom .carousel-item-right.active {
+    transform: translate(0, 0);
+    animation-name: zoomOutRight;
+}
+
+.carousel-bounce .carousel-item {
+    transform: none;
+}
+
+.carousel-bounce .carousel-item-left {
+    animation-name: bounceInRight;
+    animation-duration: .65s;
+}
+
+.carousel-bounce .carousel-item-left.active {
+    transform: translate(0, 0);
+    animation-name: bounceOutLeft;
+}
+
+.carousel-bounce .carousel-item-right {
+    animation-name: bounceInLeft;
+    animation-duration: .65s;
+}
+
+.carousel-bounce .carousel-item-right.active {
+    transform: translate(0, 0);
+    animation-name: bounceOutRight;
+}

@@ -1,0 +1,192 @@
+---
+layout: default
+title: Animate a carousel 2! With animate.css
+description: Lets animate actions on a carusel item
+css: https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css
+---
+
+<div class="container py-2">
+    <h1>Animate a carousel 2! With animate.css</h1>
+    <p class="lead">
+        Last time we tried to animate the inners of a boostrap carousel. Now the thing is, try and catch the left and
+        right aspect. Here we can have some fun for like .6seconds!
+    </p>
+    <hr>
+    <p>
+        The goal is to animate the carousel in and out, just like bootstrap but with some more flair. I dont want to
+        think about the animations so for now we just use
+        <a href="https://daneden.github.io/animate.css/">Animate.css</a> for those! Next is to check the classes used in
+        the carousel. When i was searchin i found a <strong>.carousel-item-left</strong> and a <strong>.carousel-item-right</strong>
+        class that are put on the elements when them move to the left, or to the right.
+    </p>
+    <p>
+        Note that if we go to the right we only have <strong>-right</strong> class. The in and the out is added using
+        the <strong>.active</strong> class. If an element has both it goes out. And only a <strong>-left</strong> or a
+        <strong>-right</strong> it is the incoming element.
+    </p>
+    <hr>
+    <div class="row pb-3" id="example">
+        <div class="col-lg-4">
+            <h3>Zoom example</h3>
+            <p>
+                So this is what it will look like using the <strong>zoomInRight</strong> and <strong>zoomInLeft</strong>
+                animations from Animate.css.
+            </p>
+        </div>
+        <div class="col-lg-8">
+            <div id="carousel-zoom" class="carousel slide carousel-zoom bg-dark" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-zoom" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-zoom" data-slide-to="1"></li>
+                    <li data-target="#carousel-zoom" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1530547085087-4ab083edc5cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=450&q=80);">
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            Photo by
+                            <a href="https://unsplash.com/@kupriets?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                                Bogdan Kupriets</a> on
+                            <a href="/search/photos/zoom?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1464985406652-8f5b37696c48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=450&q=80);">
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            Photo by
+                            <a href="https://unsplash.com/@ritchievalens?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                                Ritchie Valens</a> on
+                            <a href="/search/photos/zoom?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1561226959-3483f7178672?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=450&q=80);">
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            Photo by
+                            <a href="https://unsplash.com/@coldwisper?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                                Lauren McConachie</a> on
+                            <a href="/search/photos/zoom?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-zoom" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-zoom" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row pb-3">
+        <div class="col-lg-4">
+            <h3>How does it work</h3>
+            <p>Reset the default animation.</p>
+            <p>Add left and right animation names.</p>
+            <p>Also reset the transform from the default transition.</p>
+        </div>
+        <div class="col-lg-8">
+            {% highlight css %}{% include_relative animate.css %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    <div class="row pb-3" id="example">
+        <div class="col-lg-4">
+            <h3>Bounce example</h3>
+            <p>
+                Here we add the <strong>bounceInRight</strong> and <strong>bounceInLeft</strong> animations from
+                Animate.css.
+            </p>
+        </div>
+        <div class="col-lg-8">
+            <div id="carousel-bounce" class="carousel slide carousel-bounce bg-light" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-bounce" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-bounce" data-slide-to="1"></li>
+                    <li data-target="#carousel-bounce" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1555719741-2c39d524b262?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=450&q=80);">
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            Photo by
+                            <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                                NeONBRAND</a> on
+                            <a href="/search/photos/bounce?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1535480436112-07697fcbcbea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=450&q=80);">
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            Photo by
+                            <a href="https://unsplash.com/@mrsamuel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                                Samuel-Elias</a> on
+                            <a href="/search/photos/bounce?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="embed-responsive-item" style="background-image: url(https://images.unsplash.com/photo-1560094824-13b9bc472f86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=450&q=80);">
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            Photo by
+                            <a href="https://unsplash.com/@paan_azam13?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                                Farhan Azam</a> on
+                            <a href="/search/photos/bounce?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-bounce" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-bounce" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row pb-3">
+        <div class="col-lg-4">
+            <h3>Putting it all together</h3>
+            <p>So this is the final css used in above examples.</p>
+            <p>Now you can try and go and have fun with it.</p>
+            <p>Enjoy!</p>
+        </div>
+        <div class="col-lg-8">
+            {% highlight css %}{% include_relative style.css %}{% endhighlight %}
+        </div>
+    </div>
+    <hr>
+    <div class="row pb-3">
+        <h3>And done.</h3>
+        <p>
+            And we are done here. Next you can add more animations on the items using the active class. As exampled on
+            the first
+            <a href="https://disjfa.github.io/bootstrap-tricks/animate-carousel/">Animate a carousel!</a> example to
+            make it more awesome!
+        </p>
+    </div>
+    {% include footer.html %}
+</div>
