@@ -1,0 +1,60 @@
+---
+layout: default
+title: Prefers color scheme, dark or light!
+description: Add a prefer color scheme to your site
+css: style.css
+---
+
+<div class="container py-2">
+    <h1>Prefers color scheme, dark or light!</h1>
+    <p class="lead">
+        Dark mode, it is in your operating system, why not just use it. Can be done in css.
+    </p>
+    <p>
+        When you landed on this page it is either dark or light. This depends on the settings on your computer.
+    </p>
+    <h3>The explanation</h3>
+    <p>
+        First up, let's check the syntax. The most robust example can be found
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">here</a>. You can also
+        just checkout
+        some more helpful tricks on <a href="https://css-tricks.com/dark-modes-with-css/">css-tricks</a>
+    </p>
+    {% highlight css %}{% include_relative prefers-color-scheme.css %}{% endhighlight %}
+    <h3>Get it set up</h3>
+    <p>
+        Ok, we also have some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS
+            custom properties</a>. Let's setup some. We want a background color for the background and a text color for
+        the text. And the same when the color scheme is dark, just inverse the colors.
+    </p>
+    <p>
+        A small example on how this is set up on this page.
+    </p>
+    {% highlight css %}{% include_relative style.css %}{% endhighlight %}
+    <h3>Cool, what to do</h3>
+    <p>
+        Cool, now we changed the basic styles. We added dark mode on the website and are all the rage now! Yes, we are.
+        But now we need to check the rest of the site. We have cards in a specific color. Breadcrumbs in a particular
+        color. bg-light and bg-dark, they won't change on the basis on the body color. This is just a starting point for
+        your dark mode, using bootstrap. The rest is a step by step test to get the best colors on your website.
+    </p>
+    <h3>Sass</h3>
+    <p>
+        the previous example just extends the main css, we can setup the code so we use bootstrap sass variables. An
+        example.
+    </p>
+    {% highlight scss %}{% include_relative style.scss %}{% endhighlight %}
+    <h3>A note</h3>
+    <p>
+        This does not fix everything. Actually, this fixes very little. This just changes the body background and the
+        text color of the body. The rest of the styles are the same as set up. This is just the start of your journey,
+        not the end. Play, test and try what you can do and what you want to do. It can only get better.
+    </p>
+    <h3>Helpful tricks</h3>
+    <p>
+        In chrome you can toggle the mode somewhere far away. In the developer tools (f12) click the three dots
+        (shiskebab) menu pm the right. Search for "more tools" and find rendering. Here you can find the toggle.
+    </p>
+    <hr>
+    {% include footer.html %}
+</div>
